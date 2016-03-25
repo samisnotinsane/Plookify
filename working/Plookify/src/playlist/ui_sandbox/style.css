@@ -1,0 +1,228 @@
+
+.pane {
+-fx-background-color: #034001;
+}
+
+.toolbar {
+-fx-background-color: #077F02;
+}
+
+.btn {
+-fx-background-color: #0ABF02;
+}
+
+.label {
+-fx-text-fill: #FFFFFF;
+}
+
+.split-menu-button {
+    -fx-background-color: #0ABF02 ;
+    -fx-background-radius: 3, 3;
+    -fx-padding: 0;
+}
+
+.split-menu-button > .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #0ABF02 ;
+    -fx-background-insets: 1 0 1 1, 2 1 2 2;
+    -fx-background-radius: 2 0 0 2, 1 0 0 1;
+    -fx-padding: 0.333333em 0.667em 0.333333em 0.667em; /* 4 8 4 8 */
+}
+.split-menu-button > .arrow-button {
+    -fx-background-color:#0CE503 ;
+    -fx-background-insets: 1, 2;
+    -fx-background-radius: 0 2 2 0, 0 1 1 0;
+    -fx-padding: 0.5em 0.667em 0.5em 0.667em; /* 6 8 6 8 */
+}
+.split-menu-button:focused {
+    -fx-background-color: #0ABF02;
+    -fx-background-insets: -0.2;
+    -fx-background-radius: 3;
+}
+.split-menu-button:focused > .label {
+    -fx-background-color: #0ABF02;
+    -fx-background-insets: 1 0 1 1, 2 1 2 2, -1.4 0 -1.4 -1.4, 2.6 1.6 2.6 2.6;
+    -fx-background-radius: 2 0 0 2, 1 0 0 1, 4 0 0 4, 0;
+}
+.split-menu-button:focused > .arrow-button {
+    -fx-background-color: #0CE503;
+    -fx-background-insets: 1, 2, -1.4, 2.6;
+    -fx-background-radius: 0 2 2 0, 0 1 1 0, 0 4 4 0, 0;
+}
+
+#btn-search {
+-fx-background-color: #0ABF02;
+}
+
+#lbl-username {
+-fx-text-fill: #FFFFFF;
+}
+
+#btn-new-playlist {
+-fx-background: #247F23;
+}
+
+#btn-play {
+ -fx-background-radius: 30pt;
+ -fx-background-color: #48FF46;
+}
+
+#pl-track-list {
+ -fx-background-color: #247F23;
+}
+
+#txt-search {
+-fx-background-color: #FFFFFF;
+-fx-background-radius: 30pt;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * TableView                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.table-view,
+.tree-table-view {
+    /* Constants used throughout the tableview. */
+    -fx-table-header-border-color: -fx-box-border;
+    -fx-table-cell-border-color: derive(-fx-color,5%);
+}
+/***** ROW CELLS **************************************************************/
+/* Each row in the table is a table-row-cell. Inside a table-row-cell is any
+   number of table-cell. */
+.table-row-cell {
+    -fx-background: #034001;
+    -fx-background-color: -fx-table-cell-border-color, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0;
+    -fx-text-fill: -fx-text-background-color;
+}
+.table-row-cell:odd {
+    -fx-background: #034001;
+}
+/***** INDIVIDUAL CELLS ********************************************************/
+.table-cell {
+    -fx-padding: 0.166667em; /* 2px, plus border adds 1px */
+    -fx-background-color: null;
+    -fx-border-color: transparent -fx-table-cell-border-color transparent transparent;
+    -fx-cell-size: 2.0em; /* 24 */
+    -fx-text-fill: -fx-text-background-color;
+}
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
+.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected {
+    -fx-background-color: -fx-table-cell-border-color, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+/* When in constrained resize mode, the right-most visible cell should not have
+   a right-border, as it is not possible to get this cleanly out of view without
+   introducing horizontal scrollbars (see RT-14886). */
+.table-view:constrained-resize > .virtual-flow > .clipped-container > .sheet > .table-row-cell > .table-cell:last-visible,
+.tree-table-view:constrained-resize > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell > .tree-table-cell:last-visible {
+    -fx-border-color: transparent;
+}
+/***** HEADER **********************************************************************/
+/* The column-resize-line is shown when the user is attempting to resize a column. */
+.table-view .column-resize-line,
+.tree-table-view .column-resize-line {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-background;
+    -fx-padding: 0.0em 0.0416667em 0.0em 0.0416667em; /* 0 0.571429 0 0.571429 */
+}
+/* This is the area behind the column headers. An ideal place to specify background
+   and border colors for the whole area (not individual column-header's). */
+.table-view .column-header-background,
+.tree-table-view > .column-header-background {
+    -fx-background-color: #034001;
+    -fx-background-insets: 0, 1;
+}
+/* The column header row is made up of a number of column-header, one for each
+   TableColumn, and a 'filler' area that extends from the right-most column
+   to the edge of the tableview, or up to the 'column control' button. */
+.table-view .column-header,
+.tree-table-view .column-header,
+.table-view .filler,
+.tree-table-view .filler,
+.table-view > .column-header-background > .show-hide-columns-button,
+.tree-table-view > .column-header-background > .show-hide-columns-button,
+.table-view:constrained-resize .filler,
+.tree-table-view:constrained-resize .filler {
+    -fx-background-color:#034001; /* table header colour */
+    -fx-background-insets: 0, 0 1 1 0, 1 2 2 1;
+    -fx-font-weight: bold;
+    -fx-size: 2em;
+    -fx-text-fill: -fx-selection-bar-text;
+    -fx-padding: 0.166667em;
+}
+.table-view .column-header .context-menu,
+.tree-table-view .column-header .context-menu,
+.table-view > .column-header-background > .show-hide-columns-button .context-menu,
+.tree-table-view > .column-header-background > .show-hide-columns-button .context-menu {
+    -fx-font-weight: null;
+}
+.table-view .filler,
+.tree-table-view .filler,
+.table-view:constrained-resize .filler,
+.tree-table-view:constrained-resize .filler {
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1;
+}
+.table-view > .column-header-background > .show-hide-columns-button,
+.tree-table-view > .column-header-background > .show-hide-columns-button {
+    -fx-background-insets: 0, 0 0 1 1, 1 1 2 2;
+}
+.table-view .column-header .sort-order-dots-container,
+.tree-table-view .column-header .sort-order-dots-container{
+    -fx-padding: 2 0 2 0;
+}
+.table-view .column-header .sort-order,
+.tree-table-view .column-header .sort-order{
+    -fx-font-size: 0.916667em; /* 11pt - 1 less than the default font */
+}
+.table-view .column-header .sort-order-dot,
+.tree-table-view .column-header .sort-order-dot {
+    -fx-background-color: -fx-mark-color;
+    -fx-padding: 0.115em;
+    -fx-background-radius: 0.115em;
+}
+.table-view .column-header .label,
+.tree-table-view .column-header .label {
+    -fx-alignment: center;
+}
+
+/* Plus Symbol */
+.table-view .show-hide-column-image,
+.tree-table-view .show-hide-column-image {
+    -fx-background-color: -fx-mark-color;
+    -fx-padding: 0.25em; /* 3px */
+    -fx-shape: "M398.902,298.045c0.667,0,1.333,0,2,0c0,0.667,0,1.333,0,2c0.667,0,1.333,0,2,0c0,0.667,0,1.333,0,2c-0.667,0-1.333,0-2,0c0,0.666,0,1.332,0,1.999c-0.667,0-1.333,0-2,0c0-0.667,0-1.333,0-1.999c-0.666,0-1.333,0-1.999,0c0-0.667,0-1.334,0-2c0.666,0,1.333,0,1.999,0C398.902,299.378,398.902,298.711,398.902,298.045z";
+}
+/* When a column is being 'dragged' to be placed in a different position, there
+   is a region that follows along the column header area to indicate where the
+   column will be dropped. This region can be styled using the .column-drag-header
+   name. */
+.table-view .column-drag-header,
+.tree-table-view .column-drag-header {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-border-color: transparent;
+    -fx-opacity: 0.6;
+}
+/* Semi-transparent overlay to indicate the column that is currently being moved */
+.table-view .column-overlay,
+.tree-table-view .column-overlay {
+    -fx-background-color: darkgray;
+    -fx-opacity: 0.3;
+}
+/* Header Sort Arrows */
+.table-view /*> column-header-background > nested-column-header >*/ .arrow,
+.tree-table-view /*> column-header-background > nested-column-header >*/ .arrow {
+    -fx-background-color: -fx-mark-color;
+    -fx-padding: 0.25em 0.3125em 0.25em 0.3125em; /* 3 3.75 3 3.75 */
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+/* This is shown when the table has no rows and/or no columns. */
+.table-view .empty-table,
+.tree-table-view .empty-table {
+    -fx-background-color: #034001;
+    -fx-font-size: 1.166667em; /* 14pt - 2 more than the default font */
+}

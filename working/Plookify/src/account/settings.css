@@ -1,0 +1,13 @@
+.hbox{
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: #B2B2B2;
+}
+.top-settings{
+    -fx-effect: dropshadow(gaussian, grey, 10, 0, 10, 10);
+}
+.settings-button{
+    -fx-background-color: #3A3D42;
+}
+.background{
+    -fx-background-color: #FFFFFF;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="new-playlist-dialog-background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playlist.NewPlaylistNameDialogController">
+   <top>
+      <AnchorPane id="new-playlist-dialog-background" prefHeight="116.0" prefWidth="426.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <TextField id="txt-playlist-name" fx:id="playlistName" layoutX="14.0" layoutY="28.0" onAction="#getPlaylistName" prefHeight="29.0" prefWidth="389.0" promptText="Running">
+               <font>
+                  <Font name="Avenir Next Regular" size="13.0" />
+               </font>
+            </TextField>
+            <Label id="lbl-playlist-name" layoutX="14.0" layoutY="1.0" prefHeight="27.0" prefWidth="133.0" text="Playlist name:">
+               <font>
+                  <Font name="Avenir Next Regular" size="13.0" />
+               </font>
+            </Label>
+            <HBox layoutY="72.0" prefHeight="37.0" prefWidth="426.0">
+               <children>
+                  <Region prefHeight="27.0" prefWidth="262.0" />
+                  <Button id="btn-cancel" mnemonicParsing="false" onAction="#cancelBtnClicked" stylesheets="@style.css" text="Cancel">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </Button>
+                  <Region layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="7.0" />
+                  <Button id="btn-ok" mnemonicParsing="false" onAction="#okBtnClicked" prefHeight="27.0" prefWidth="59.0" styleClass="btnOk" stylesheets="@style.css" text="OK">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

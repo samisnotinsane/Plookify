@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" onKeyPressed="#mainPaneKey" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="player.FXMLDocumentController">
+    <children>
+        <SplitPane dividerPositions="0.19373776908023482" layoutX="42.0" layoutY="14.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="766.0" prefWidth="175.0">
+                    <children>
+                        <VBox layoutX="48.0" layoutY="91.0" prefHeight="766.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <TextField fx:id="textField" onKeyPressed="#handleEnterPressed" promptText="Search" />
+                                <HBox>
+                                    <children>
+                                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="198.0" text="+ New Playlist" />
+                                    </children>
+                                </HBox>
+                                <ListView prefHeight="659.0" prefWidth="196.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <SplitPane dividerPositions="0.8337696335078534" layoutX="130.0" layoutY="99.0" orientation="VERTICAL" prefHeight="598.0" prefWidth="1086.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                              <SplitPane dividerPositions="0.7592137592137592" prefHeight="633.0" prefWidth="816.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                                    <TableView fx:id="trackTable" onMouseClicked="#clickListener" prefHeight="459.0" prefWidth="1084.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="-25.0" AnchorPane.topAnchor="0.0">
+                                                        <columns>
+                                                            <TableColumn fx:id="name" prefWidth="229.0" text="Name" />
+                                                            <TableColumn fx:id="artist" minWidth="0.0" prefWidth="131.0" text="Artist" />
+                                                            <TableColumn fx:id="duration" prefWidth="112.0" text="Duration" />
+                                                            <TableColumn fx:id="genre" minWidth="4.0" prefWidth="122.0" text="Genre" />
+                                                        </columns>
+                                                    </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <TableView fx:id="nowPlayingTable" layoutX="-8.0" layoutY="50.0" onMouseClicked="#nowPlayingListener" prefHeight="581.0" prefWidth="192.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                            <columns>
+                                              <TableColumn fx:id="nowPlayingName" prefWidth="124.0" text="Song" />
+                                              <TableColumn fx:id="nowPlayingDuration" prefWidth="67.0" text="Duration" />
+                                            </columns>
+                                          </TableView>
+                                          <HBox layoutX="15.0" prefHeight="40.0" prefWidth="192.0" AnchorPane.bottomAnchor="591.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="40.0" prefWidth="194.0" text="NOW PLAYING QUEUE" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ButtonBar layoutX="201.0" layoutY="42.0" prefHeight="40.0" prefWidth="393.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="42.0">
+                                            <buttons>
+                                                <Button mnemonicParsing="false" onAction="#previousSong" text="Previous" />
+                                                <Button fx:id="playBtn" mnemonicParsing="false" onAction="#playListener" prefHeight="30.0" prefWidth="178.0" text="Play" />
+                                                <Button fx:id="nextBtn" mnemonicParsing="false" onAction="#clickNext" text="Next" />
+                                            </buttons>
+                                        </ButtonBar>
+                              <Slider fx:id="volSlider" layoutX="37.0" layoutY="42.0" onDragDetected="#volumeDetect" prefHeight="16.0" prefWidth="112.0" AnchorPane.bottomAnchor="65.0" AnchorPane.rightAnchor="667.0" />
+                              <Slider fx:id="durationSlider" layoutX="219.0" layoutY="20.0" onDragDone="#startAgain" onDragDropped="#startAgain" onDragEntered="#startAgain" onDragExited="#startAgain" onDragOver="#startAgain" onMouseDragEntered="#startAgain" onMouseDragExited="#startAgain" onMouseDragOver="#startAgain" onMouseDragReleased="#startAgain" onMouseDragged="#stopCounting" onMousePressed="#stopCounting" onMouseReleased="#startAgain" prefHeight="16.0" prefWidth="376.0" />
+                              <Label fx:id="durLabel" layoutX="599.0" layoutY="19.0" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

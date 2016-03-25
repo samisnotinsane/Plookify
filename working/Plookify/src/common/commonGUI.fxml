@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#mainPaneKey" prefHeight="768.0" prefWidth="1209.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common.commonGUIController">
+   <bottom>
+      <Pane fx:id="bottomPane" prefHeight="100.0" prefWidth="1209.0" BorderPane.alignment="CENTER">
+      </Pane>
+   </bottom>
+   <left>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="135.0" styleClass="leftSidePane" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="668.0" fitWidth="135.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="radioBtn" focusTraversable="false" layoutX="8.0" layoutY="100.0" mnemonicParsing="false" onAction="#loadRadio" styleClass="menuButton" stylesheets="@style.css" text="Radio Generator" />
+            <Button focusTraversable="false" layoutX="8.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadPlayer" styleClass="menuButton" stylesheets="@style.css" text="My Music" />
+            <Button focusTraversable="false" layoutX="8.0" layoutY="180.0" mnemonicParsing="false" onAction="#loadPlaylist" styleClass="menuButton" stylesheets="@style.css" text="My Playlist" />
+            <Button focusTraversable="false" layoutX="8.0" layoutY="220.0" mnemonicParsing="false" onAction="#loadAccount" styleClass="menuButton" stylesheets="@style.css" text="My Account" />
+            <Button fx:id="logout" focusTraversable="false" layoutX="15.0" layoutY="600.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@style.css" text="Log out" />
+         </children>
+      </Pane>
+   </left>
+   <right>
+      <Pane id="rightSidePane" fx:id="rightSidePane" prefHeight="668.0" prefWidth="250.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutY="-1.0" prefHeight="100.0" prefWidth="252.0" />
+         </children></Pane>
+   </right>
+   <center>
+      <Pane fx:id="middlePane" prefHeight="668.0" prefWidth="824.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

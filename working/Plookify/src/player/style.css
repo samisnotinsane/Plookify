@@ -1,0 +1,120 @@
+.slider2 .track{
+    -fx-background-color:null;
+
+}
+
+.slider2{
+    -fx-opacity: 0;
+}
+
+.slider2:hover{
+    -fx-opacity: 100;
+}
+
+.progressbar{
+    -fx-accent: gray;
+    -fx-padding: 0;
+}
+.progressbar > .bar {
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+}
+
+.mainPane {
+    -fx-background-color: white;
+}
+
+.myDialog{
+    -fx-background-color: white;
+}
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: white;
+}
+.myDialog > *.label.content{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.myDialog:no-header *.header-panel{
+    -fx-background-color: transparent;
+}
+
+#playButton{
+    -fx-background-image: url("resources/icons/playIcon.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#playButton:armed{
+    -fx-effect: dropshadow(gaussian, gray, -1, 0, 0, -1);
+}
+
+#nextButton{
+    -fx-background-image: url("resources/icons/nextIcon.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#nextButton:armed{
+    -fx-effect: dropshadow(gaussian, gray, -1, 0, 0, -1);
+
+}
+
+#nextButton:hover{
+    -fx-background-image: url("resources/icons/nextIcon2.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#previousButton{
+    -fx-background-image: url("resources/icons/previousIcon.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#previousButton:armed{
+    -fx-effect: dropshadow(gaussian, gray, -1, 0, 0, -1);
+
+}
+
+#previousButton:hover{
+    -fx-background-image: url("resources/icons/previousIcon2.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#shuffleButton{
+    -fx-background-image: url("resources/icons/shuffleIcon.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#shuffleButton:hover{
+    -fx-background-image: url("resources/icons/shuffleIcon2.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#shuffleButton:selected{
+    -fx-background-image: url("resources/icons/shuffleIcon3.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#repeatButton{
+    -fx-background-image: url("resources/icons/repeatIcon.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#repeatButton:hover{
+    -fx-background-image: url("resources/icons/repeatIcon2.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}
+
+#repeatButton:selected{
+    -fx-background-image: url("resources/icons/repeatIcon3.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+}

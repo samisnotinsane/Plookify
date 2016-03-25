@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668" prefWidth="824" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+       <TextField fx:id="artistEntry" layoutX="14.0" layoutY="14.0" promptText="Search for Artist" />
+       <Button fx:id="submitSearch" layoutX="210.0" layoutY="14.0" onAction="#handleArtistEntryButtonAction">Search</Button>
+       <Button fx:id="submitPlaylist" layoutX="38.0" layoutY="502.0" onAction="#handleGenerateRadioAction">Generate Radio</Button>
+      <ListView fx:id="resultsRadio" layoutX="37.0" layoutY="94.0" prefHeight="400.0" prefWidth="726.0">
+      </ListView>
+      <Label layoutX="38.0" layoutY="67.0" prefHeight="17.0" prefWidth="308.0" text="Search for an artist to generate radio" />
+   </children>
+</AnchorPane>

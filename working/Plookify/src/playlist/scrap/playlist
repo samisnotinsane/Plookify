@@ -1,0 +1,81 @@
+  public Playlist addTracks(ArrayList<Sequence> tracks) {
+         return new Playlist(tracks); // creates a new playlist with the given list of tracks
+     }
+
+ ----------------
+
+ // add blank pl
+    public Playlist(String name) {
+        this.name = name;
+        //PlaylistBank.storePlaylist(this);
+    }
+
+// plays each track serially
+    public void serialPlayback() {
+//        for(int i=0; i<tracks.size(); i++) {
+//            // get a song and pass it to the player
+//            String currentTrack = tracks.get(i);
+//            //Player trkPlayer = new Player(currentTrack);
+//            // once track finishes playing, move to next song...
+//        }
+    }
+
+        // check requirements to see if shuffle is necessary
+        public void shufflePlayback() {
+
+        }
+
+// Deprecate this constructor soon...
+    // add pl w/ song
+    public Playlist(ArrayList<String> tracks, String name) {
+//        this.tracks = tracks;
+//        this.name = name;
+    }
+
+//    @Override
+//    public void initialise() {
+//        System.out.println("Initialising Playlist...");
+//        System.out.println("System is ready to accept commands.");
+//    }
+
+    // returns a list of all playlists
+//    public static ArrayList<String> getAllNames() {
+//
+//    }
+
+    // Stores the name, artist and genre information for each Track in a 2D array.
+//    public void showTracks() {
+//        int plSize = trackList.size(); // throws a nullpointer exception
+//        int colSize = 4; // 4 columns: name, artist, genre, duration.
+//        String[][] tracksInPlaylist = new String[plSize][colSize];
+//
+//        for(int i=0; i<trackList.size(); i++) {
+//            // go through and fill 2D array with Track information
+//            Track trackRef = trackList.get(i);
+//
+//            // fetch full track details
+//            String trackName = trackRef.getName();
+//            String trackArtist = trackRef.getArtist().getName();
+//            String trackGenre = trackRef.getArtist().getGenre();
+//            String trackDuration = Integer.toString(trackRef.getDuration());
+//
+//            // insert track details into array
+//            tracksInPlaylist[i][0] = trackName;
+//            tracksInPlaylist[i][1] = trackArtist;
+//            tracksInPlaylist[i][2] = trackGenre;
+//            tracksInPlaylist[i][3] = trackDuration;
+//        }
+//        // 02/02/2016: Split showTracks into two methods
+//        /* The split will be such that one method will populate the array with
+//         * Track information and the other will be responsible for printing
+//         * that information.
+//         */
+//
+//        // ready to print Track details as they're now in tracksInPlaylist array
+//        for(int i=0; i<tracksInPlaylist.length; i++) {
+//            for(int j=0; j<tracksInPlaylist[0].length; j++) {
+//                System.out.println(tracksInPlaylist[i][j]);
+//            }
+//        }
+//
+//    }// END showTracks

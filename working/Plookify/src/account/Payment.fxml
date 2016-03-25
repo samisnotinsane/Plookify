@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" styleClass="root" stylesheets="@Payment.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="512.0" />
+      <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="512.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <HBox maxWidth="-Infinity" prefHeight="100.0" prefWidth="1024.0" styleClass="premium_box" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="50.0" right="50.0" top="50.0" />
+         </GridPane.margin>
+         <children>
+            <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="190.0" prefWidth="1024.0">
+               <children>
+                  <Label text="Exclusive Features" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Social manager: Add your friends and share your playlist" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Radio Generator: Generate radio based on your interests" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="£9.99" textFill="WHITE">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox fx:id="paymentPaypal" alignment="CENTER" maxHeight="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" styleClass="paymentbox" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="80.0" right="30.0" top="250.0" />
+         </GridPane.margin>
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/paypal.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox fx:id="paymentCreditCard" alignment="CENTER" maxHeight="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" styleClass="paymentbox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="30.0" right="80.0" top="250.0" />
+         </GridPane.margin>
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/credit-card-logos.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label text="Chose Payment Type" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+         <font>
+            <Font name="Source Sans Pro Bold" size="46.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="30.0" top="30.0" />
+         </GridPane.margin>
+      </Label>
+      <HBox fx:id="paymentFree" alignment="CENTER" maxHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" styleClass="paymentbox" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="30.0" left="400.0" right="400.0" top="30.0" />
+         </GridPane.margin>
+         <children>
+            <Label text="FREE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

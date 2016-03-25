@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social.gui.PlaylistCon">
+   <children>
+      <ListView fx:id="playlist" layoutX="128.0" layoutY="136.0" prefHeight="384.0" prefWidth="235.0" />
+      <Label layoutX="203.0" layoutY="91.0" text="Playlist" />
+      <Label layoutX="478.0" layoutY="91.0" text="Tracks" />
+      <ListView fx:id="tracks" layoutX="478.0" layoutY="136.0" prefHeight="377.0" prefWidth="247.0" />
+   </children>
+</AnchorPane>

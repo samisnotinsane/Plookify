@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="mainPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#mainPaneKey" prefHeight="100.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="player.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="1258.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" styleClass="mainPane2">
+         <image>
+            <Image url="@../common/img.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-1.0" layoutY="1.0" prefHeight="100.0" prefWidth="1258.0" styleClass="mainPane" />
+      <Button id="previousButton" fx:id="prevBtn" focusTraversable="false" layoutX="506.0" layoutY="45.0" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#previousSong" prefHeight="35.0" prefWidth="35.0" styleClass="trackButton" stylesheets="@style.css" />
+      <Button id="playButton" fx:id="playBtn" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="550.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseDragOver="#hoverPlay" onMouseEntered="#hoverPlay" onMouseExited="#stopHoverPlay" onMousePressed="#playListener" prefHeight="50.0" prefWidth="50.0" styleClass="trackButton" stylesheets="@style.css" />
+      <Button id="nextButton" fx:id="nextBtn" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="608.0" layoutY="45.0" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#clickNext" prefHeight="35.0" prefWidth="35.0" styleClass="trackButton" stylesheets="@style.css" />
+      <Slider fx:id="durationSlider" focusTraversable="false" layoutX="420.0" layoutY="15.0" onDragDone="#startAgain" onDragDropped="#startAgain" onDragEntered="#startAgain" onDragExited="#startAgain" onDragOver="#startAgain" onMouseDragEntered="#startAgain" onMouseDragExited="#startAgain" onMouseDragOver="#startAgain" onMouseDragReleased="#startAgain" onMouseDragged="#stopCounting" onMousePressed="#stopCounting" onMouseReleased="#startAgain" prefHeight="16.0" prefWidth="376.0" />
+      <Label fx:id="durLabel" focusTraversable="false" layoutX="800.0" layoutY="15.0" textFill="WHITE" />
+      <Label fx:id="elapsedLabel" focusTraversable="false" layoutX="385.0" layoutY="15.0" textFill="WHITE" />
+      <Label fx:id="trackLabel" focusTraversable="false" layoutX="104.0" layoutY="30.0" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="artistLabel" focusTraversable="false" layoutX="104.0" layoutY="50.0" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="909.0" layoutY="33.0" onMousePressed="#muteVol" pickOnBounds="true" preserveRatio="true" styleClass="trackButton">
+         <image>
+            <Image url="@resources/icons/sound2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1069.0" layoutY="33.0" onMousePressed="#topVol" pickOnBounds="true" preserveRatio="true" styleClass="trackButton">
+         <image>
+            <Image url="@resources/icons/sound.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="pb" focusTraversable="false" layoutX="952.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="8.0" prefWidth="105.0" progress="0.0" styleClass="progressbar" stylesheets="@style.css" />
+      <Slider fx:id="volSlider" focusTraversable="false" layoutX="950.0" layoutY="40.0" onDragDetected="#volumeDetect" prefHeight="16.0" prefWidth="112.0" styleClass="slider2" stylesheets="@style.css" />
+      <Pane fx:id="albumArtwork" prefHeight="100.0" prefWidth="100.0" />
+      <ToggleButton id="repeatButton" fx:id="repeat" focusTraversable="false" layoutX="652.0" layoutY="45.0" maxHeight="3735.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#setRepeat" prefHeight="35.0" prefWidth="35.0" styleClass="trackButton" stylesheets="@style.css" />
+      <ToggleButton id="shuffleButton" fx:id="shuffle" focusTraversable="false" layoutX="462.0" layoutY="45.0" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#setShuffle" prefHeight="35.0" prefWidth="35.0" styleClass="trackButton" stylesheets="@style.css" />
+   </children>
+</Pane>

@@ -1,0 +1,162 @@
+
+/**************
+    BUTTONS
+**************/
+* {
+    -fx-border-color: transparent;
+}
+
+.button{
+    -fx-background-color: #3A3D42;
+    -fx-text-fill: white;
+}
+
+.menuButton:hover{
+    -fx-text-fill: #56a5ba;
+}
+
+.menuButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.menuButton: hover{
+    -fx-underline: true;
+}
+.menuButton:pressed{
+    -fx-effect: dropshadow(gaussian, black, 0.5, 0, 0, 0.5);
+}
+
+.trackButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.trackButton:pressed{
+}
+
+.trackButton:hover{
+    -fx-text-fill: gray;
+}
+
+
+
+/***************
+    TABLEVIEW
+***************/
+.table-view {
+    -fx-background-color: white;
+    }
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.table-view .filler{
+    -fx-opacity: 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #dee7ef;
+    -fx-table-cell-border-color: white;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, white;
+    -fx-table-cell-border-color: white;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+    -fx-table-cell-border-color: white;
+    -fx-background-color: gray;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+/******************
+    SCROLL-BARS
+******************/
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.scroll-pane > .scroll-bar:vertical,
+.scroll-pane > .scroll-bar:vertical > .track,
+.scroll-pane > .scroll-bar:vertical > .track-background,
+.scroll-pane > .scroll-bar:horizontal,
+.scroll-pane > .scroll-bar:horizontal > .track,
+.scroll-pane > .scroll-bar:horizontal > .track-background{
+    -fx-background-color: white;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button,
+.scroll-pane > .scroll-bar > .increment-button,
+.scroll-pane > .scroll-bar > .decrement-button{
+    -fx-opacity: 0;
+}
+
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb,
+.scroll-pane .scroll-bar:horizontal .thumb,
+.scroll-pane .scroll-bar:vertical .thumb{
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 3em;
+}
+
+.table-view .scroll-bar:vertical > .increment-button,
+.table-view .scroll-bar:vertical > .decrement-button,
+.table-view .scroll-bar:horizontal > .increment-button,
+.table-view .scroll-bar:horizontal > .decrement-button,
+.scroll-pane .scroll-bar:vertical > .increment-button,
+.scroll-pane .scroll-bar:vertical > .decrement-button,
+.scroll-pane .scroll-bar:horizontal > .increment-button,
+.scroll-pane .scroll-bar:horizontal > .decrement-button{
+    -fx-padding: 0em 0em  ;
+}
+
+.scroll-pane .corner,
+.table-view .corner{
+    -fx-background-color: white;
+}
+
+
+/*************
+    PANES
+*************/
+.mainPane{
+    -fx-background-color: rgba(0,0,0,0.9);
+}
+
+#mainPane, #rightSidePane{
+    -fx-background-color: white;
+}
+
+.leftSidePane{
+    -fx-background-color: #48749F;
+}
+
+#rightSidePane{
+
+}

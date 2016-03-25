@@ -1,0 +1,14 @@
+.root{
+    /* -fx-background-image: url(resources/u8MFyyo.jpg); */
+    -fx-background-color: #517FA3;
+}
+.paymentbox{
+    /* -fx-background-radius: 10px; */
+    -fx-effect: dropshadow(gaussian, grey, 10, 0, 0, 0);
+}
+.premium_box{
+    -fx-background-color: #436885;
+}
+.button{
+    -fx-background-color: #3A3D42;
+}

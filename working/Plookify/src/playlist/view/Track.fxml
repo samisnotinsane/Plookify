@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playlist.view.TrackController">
+   <children>
+      <VBox layoutX="34.0" layoutY="52.0" prefHeight="577.0" prefWidth="756.0">
+         <children>
+            <TableView fx:id="tblTrack" prefHeight="558.0" prefWidth="743.0">
+              <columns>
+                <TableColumn fx:id="colTrack" prefWidth="318.70446395874023" text="Name" />
+                <TableColumn fx:id="colArtist" prefWidth="267.2954864501953" text="Artist" />
+                  <TableColumn fx:id="colDuration" prefWidth="138.6805877685547" text="Duration" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="817.0">
+         <children>
+            <Separator opacity="0.0" prefHeight="27.0" prefWidth="25.0" />
+            <TextField fx:id="txtSearch" prefHeight="27.0" prefWidth="189.0" promptText="Search artists..." />
+            <Separator opacity="0.0" prefHeight="27.0" prefWidth="20.0" />
+            <Button fx:id="btnSearch" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="36.0" style="-fx-background-radius: 0pt;" text="-&gt;">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="21.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../bin/icons/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Separator opacity="0.0" prefHeight="27.0" prefWidth="475.0" />
+            <Button fx:id="btnMain" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showMainWindow" style="-fx-background-radius: 0pt;" text="X">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="21.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../bin/icons/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="-8.0" layoutY="636.0" prefHeight="13.0" prefWidth="820.0">
+         <children>
+            <Separator opacity="0.0" prefHeight="27.0" prefWidth="25.0" />
+            <Separator opacity="0.0" prefHeight="27.0" prefWidth="16.0" />
+            <Separator opacity="0.0" prefHeight="27.0" prefWidth="672.0" />
+            <Button fx:id="btnAddToPlaylist" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addTrackToPlaylist" prefHeight="27.0" prefWidth="87.0" style="-fx-background-radius: 0pt;" text="+">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="21.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../bin/icons/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</Pane>

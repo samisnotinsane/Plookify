@@ -1,0 +1,15 @@
+02/02/2016
+- Implement Playlist class to hold tracks. (D)
+- Allow tracks to be added/removed (O)
+    - From any point in the playlist sequence. (X)
+- Allow users to browse tracks in the playlist. (D)
+
+11/02/2016
+-Supports adding new playlist header to database
+-Supports fetching all playlist headers
+
+13/02/2016
+-Fixed playlist header fetch bug
+
+22/02/2016
+-Added ability to load a playlist from database into memory.

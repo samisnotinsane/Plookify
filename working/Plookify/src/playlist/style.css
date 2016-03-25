@@ -1,0 +1,164 @@
+/**
+ * Created by sameenislam on 29/01/2016.
+ * FXML Stylesheet.
+ */
+
+.root{
+    -fx-font-size: 16pt;
+    -fx-font-family: "Courier New";
+    -fx-base: rgb(132, 145, 47);
+    -fx-background: rgb(225, 228, 203);
+}
+
+
+.title-pane {
+-fx-background-color: #FFFFFF;
+}
+
+#btn-more {
+ -fx-text-fill: white;
+ -fx-font-family: "Avenir";
+ -fx-background-color: #5ED1CB;
+ -fx-background-radius: 3pt;
+}
+
+.player-pane {
+-fx-background-color: #FFFFFF;
+}
+
+#btn-prev {
+-fx-text-fill: white;
+-fx-background-color: #404E59;
+-fx-background-radius: 10pt;
+}
+
+#btn-pause {
+-fx-text-fill: white;
+-fx-background-color: #404E59;
+-fx-background-radius: 10pt;
+}
+
+#btn-next {
+-fx-text-fill: white;
+-fx-background-color: #404E59;
+-fx-background-radius: 10pt;
+}
+
+#btn-mute {
+-fx-text-fill: white;
+-fx-background-color: #404E59;
+-fx-background-radius: 10pt;
+}
+
+#btn-shuffle {
+-fx-text-fill: white;
+-fx-background-color: #404E59;
+-fx-background-radius: 10pt;
+}
+
+#btn-repeat {
+-fx-text-fill: white;
+-fx-background-color: #404E59;
+-fx-background-radius: 10pt;
+}
+
+.now-playing-pane {
+-fx-background-color: #FFFFFF;
+}
+
+.playlist-pane {
+-fx-background-color: #FFFFFF;
+}
+
+#btn-add-playlist {
+ -fx-text-fill: white;
+ -fx-font-family: "Avenir";
+ -fx-background-color: #5ED1CB;
+ -fx-background-radius: 0pt;
+}
+
+#btn-remove-playlist {
+ -fx-text-fill: white;
+ -fx-font-family: "Avenir";
+ -fx-background-color: #5ED1CB;
+ -fx-background-radius: 0pt;
+}
+
+#btn-rename-playlist {
+ -fx-text-fill: white;
+ -fx-font-family: "Avenir";
+ -fx-background-color: #5ED1CB;
+ -fx-background-radius: 0pt;
+}
+
+#top-title {
+-fx-text-fill: black;
+-fx-font-size: 20pt;
+-fx-font-family: "Avenir";
+}
+
+#main-top-toolbar {
+-fx-background-color: #FFFFFF;
+}
+
+#btn-search {
+ -fx-text-fill: white;
+ -fx-font-family: "Avenir";
+ -fx-background-color: #5ED1CB;
+ -fx-background-radius: 3pt;
+}
+
+#btn-tracks {
+ -fx-text-fill: white;
+ -fx-font-family: "Avenir";
+ -fx-background-color: #5ED1CB;
+ -fx-background-radius: 3pt;
+}
+
+#btn-artists {
+ -fx-text-fill: white;
+ -fx-font-family: "Avenir";
+ -fx-background-color: #5ED1CB;
+ -fx-background-radius: 3pt;
+}
+
+#btn-radio {
+ -fx-text-fill: white;
+ -fx-font-family: "Avenir";
+ -fx-background-color: #5ED1CB;
+ -fx-background-radius: 3pt;
+}
+
+#btn-settings {
+-fx-text-fill: white;
+-fx-font-family: "Avenir";
+-fx-background-color: #3D4752;
+-fx-background-radius: 3pt;
+}
+
+#btn-go-premium {
+-fx-text-fill: white;
+-fx-font-family: "Avenir";
+-fx-background-color: #5ED1CB;
+-fx-background-radius: 3pt;
+}
+
+#txt-playlist-name {
+-fx-background-color: #252D30;
+}
+
+#lbl-playlist-name {
+-fx-text-fill: white;
+}
+
+#new-playlist-dialog-background {
+-fx-background-color: #0E1211;
+}
+
+#btn-ok {
+-fx-background-color: #1EA5E8;
+}
+
+#btn-cancel {
+-fx-background-color: #E6374E;
+}

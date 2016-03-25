@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="824.0" styleClass="pane" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="204.0" layoutY="183.0" prefHeight="464.0" prefWidth="608.0">
+        <columns>
+          <TableColumn prefWidth="250.0" text="Song" />
+          <TableColumn prefWidth="150.0" text="Artist" />
+            <TableColumn prefWidth="150.0" text="Genre" />
+        </columns>
+      </TableView>
+      <Separator layoutX="210.0" layoutY="164.0" prefHeight="18.0" prefWidth="587.0" />
+      <Label layoutX="206.0" layoutY="52.0" text="Playlist" />
+      <ToolBar prefHeight="40.0" prefWidth="825.0" styleClass="toolbar">
+        <items>
+            <Button mnemonicParsing="false" styleClass="btn" text="&lt;" />
+            <Button mnemonicParsing="false" styleClass="btn" text="&gt;" />
+            <TextField id="txt-search" prefHeight="27.0" prefWidth="190.0" promptText="Search..." />
+          <Button id="btn-search" mnemonicParsing="false" styleClass="btn" text="Search" />
+            <Separator prefHeight="28.0" prefWidth="284.0" style="-fx-opacity: 0;" />
+            <Label id="lbl-username" text="Sameen Islam" />
+            <Separator prefHeight="28.0" prefWidth="10.0" />
+            <SplitMenuButton mnemonicParsing="false" text="Sign out">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Account" />
+                <MenuItem mnemonicParsing="false" text="Settings" />
+              </items>
+            </SplitMenuButton>
+        </items>
+      </ToolBar>
+      <Label id="lbl-pl-name" layoutX="204.0" layoutY="71.0" text="Running">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ToolBar layoutY="40.0" prefHeight="628.0" prefWidth="188.0" styleClass="toolbar">
+         <items>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="173.0" styleClass="rootPane">
+               <children>
+                  <Label text="PLAYLISTS" />
+                  <ListView prefHeight="138.0" prefWidth="173.0" styleClass="toolbar" />
+                  <Separator orientation="VERTICAL" prefHeight="436.0" prefWidth="173.0" style="-fx-opacity: 0;" />
+                  <Button id="btn-new-playlist" mnemonicParsing="false" prefHeight="27.0" prefWidth="188.0" styleClass="btn" text="+ New Playlist" />
+               </children>
+            </VBox>
+         </items>
+      </ToolBar>
+      <Label layoutX="206.0" layoutY="109.0" text="Created by:" />
+      <Label layoutX="282.0" layoutY="109.0" text="Sameen Islam" />
+      <Label layoutX="372.0" layoutY="108.0" text="•" />
+      <Label layoutX="384.0" layoutY="109.0" text="Private" />
+      <Button id="btn-play" layoutX="209.0" layoutY="132.0" mnemonicParsing="false" text="Play" />
+      <SplitMenuButton layoutX="260.0" layoutY="132.0" mnemonicParsing="false" styleClass="button" text="Share">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Make Private" />
+          <MenuItem mnemonicParsing="false" text="Delete" />
+        </items>
+      </SplitMenuButton>
+      <Label layoutX="739.0" layoutY="137.0" text="songs" />
+      <Label layoutX="727.0" layoutY="138.0" text="5" />
+   </children>
+</Pane>

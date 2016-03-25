@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="824.0" stylesheets="@settings.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account.SettingsController">
+   <content>
+      <AnchorPane prefWidth="806.0">
+         <children>
+            <StackPane alignment="TOP_CENTER" maxWidth="-Infinity" prefWidth="804.0">
+               <children>
+                  <GridPane styleClass="background">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="-Infinity" prefHeight="60.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="NEVER" />
+                    </rowConstraints>
+                     <StackPane.margin>
+                        <Insets top="60.0" />
+                     </StackPane.margin>
+                     <children>
+                        <VBox alignment="BOTTOM_LEFT" prefWidth="100.0" GridPane.columnSpan="2">
+                           <children>
+                              <Label text="Devices">
+                                 <font>
+                                    <Font name="Source Sans Pro Light" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Separator prefWidth="200.0" style="-fx-background-color: black;">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </Separator>
+                           </children>
+                        </VBox>
+                        <TableView fx:id="devicesTable" prefHeight="200.0" prefWidth="200.0" styleClass="background" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                            <columns>
+                                <TableColumn fx:id="deviceTableId" editable="false" prefWidth="40.0" sortable="false" text="#" />
+                                <TableColumn fx:id="deviceTableName" editable="false" prefWidth="150.0" sortable="false" text="Name" />
+                                <TableColumn fx:id="deviceTableAdded" editable="false" prefWidth="250.0" sortable="false" text="Added" />
+                                <TableColumn fx:id="deviceTableType" editable="false" prefWidth="100.0" sortable="false" text="Type" />
+                            </columns>
+                           <GridPane.margin>
+                              <Insets left="15.0" right="15.0" top="15.0" />
+                           </GridPane.margin>
+                        </TableView>
+                        <VBox alignment="BOTTOM_LEFT" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                           <children>
+                              <Label text="Payment">
+                                 <font>
+                                    <Font name="Source Sans Pro Light" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Separator prefWidth="200.0" style="-fx-background-color: black;">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </Separator>
+                           </children>
+                           <GridPane.margin>
+                              <Insets top="25.0" />
+                           </GridPane.margin>
+                        </VBox>
+                        <VBox prefHeight="90.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                           <children>
+                              <Label fx:id="nextPaymentDue" text="The next payment is due on 25th of April" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="makePayment" focusTraversable="false" mnemonicParsing="false" styleClass="settings-button" text="Make Payment" textFill="WHITE" />
+                                    <Button fx:id="changeSubscription" focusTraversable="false" mnemonicParsing="false" styleClass="settings-button" text="Change Subscription Type" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="15.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="BOTTOM_LEFT" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                           <children>
+                              <Label text="Status">
+                                 <font>
+                                    <Font name="Source Sans Pro Light" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Separator prefWidth="200.0" style="-fx-background-color: black;">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </Separator>
+                           </children>
+                        </VBox>
+                        <Button fx:id="closeAccount" mnemonicParsing="false" styleClass="settings-button" text="Close Your Account" textFill="WHITE" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" right="15.0" top="15.0" />
+                           </GridPane.margin>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Add This Device" />
+                                    <TextField fx:id="deviceName" promptText="Device Name">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <ChoiceBox fx:id="choiceBox" maxWidth="-Infinity" prefWidth="100.0">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                    <Button fx:id="addDevice" mnemonicParsing="false" styleClass="settings-button" text="Add" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Replace A Device" />
+                                    <TextField fx:id="oldDeviceName" promptText="Old Device Name">
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="newDeviceName" promptText="New Device Name">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <ChoiceBox fx:id="choiceBox1" maxWidth="-Infinity" prefWidth="100.0">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                    <Button fx:id="replaceDevice" mnemonicParsing="false" styleClass="settings-button" text="Replace" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="806.0" style="-fx-background-color: #3A3D42;" StackPane.alignment="TOP_LEFT">
+                     <children>
+                        <Label layoutX="14.0" layoutY="4.0" text="Settings" textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro Light" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="name" layoutX="774.0" layoutY="6.0" text="Tahnik Mustasin" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="accountType" layoutX="780.0" layoutY="38.0" text="Premium" textFill="WHITE" AnchorPane.rightAnchor="14.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

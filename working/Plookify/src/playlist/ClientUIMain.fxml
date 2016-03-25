@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1071.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playlist.Controller">
+   <bottom>
+      <HBox styleClass="player-pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="30.0" prefWidth="60.0" />
+            <Button id="btn-prev" mnemonicParsing="false" stylesheets="@style.css" text="I&lt;" />
+            <Button id="btn-pause" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@style.css" text="II" />
+            <Button id="btn-next" layoutX="40.0" layoutY="10.0" mnemonicParsing="false" stylesheets="@style.css" text="&gt;I" />
+            <Region prefHeight="30.0" prefWidth="50.0" />
+            <Label text="-00:00" />
+            <Slider prefHeight="16.0" prefWidth="504.0" />
+            <Label layoutX="119.0" layoutY="10.0" text="00:00" />
+            <Region layoutX="95.0" layoutY="10.0" prefHeight="30.0" prefWidth="24.0" />
+            <ToggleButton id="btn-mute" mnemonicParsing="false" stylesheets="@style.css" text="Mute" />
+            <Region prefHeight="30.0" prefWidth="6.0" />
+            <Slider layoutX="153.0" layoutY="10.0" prefHeight="16.0" prefWidth="74.0" />
+            <Region layoutX="907.0" layoutY="10.0" prefHeight="30.0" prefWidth="24.0" />
+            <ToggleButton id="btn-shuffle" mnemonicParsing="false" stylesheets="@style.css" text="Shu" />
+            <Region layoutX="765.0" layoutY="10.0" prefHeight="30.0" prefWidth="12.0" />
+            <ToggleButton id="btn-repeat" mnemonicParsing="false" stylesheets="@style.css" text="Rep" />
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox prefHeight="474.0" prefWidth="202.0" styleClass="playlist-pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="btn-add-playlist" mnemonicParsing="false" onAction="#newPlaylistBtnClicked" prefHeight="27.0" prefWidth="205.0" stylesheets="@style.css" text="+ Add Playlist" />
+            <Button id="btn-remove-playlist" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#removePlaylistBtnClicked" prefHeight="27.0" prefWidth="207.0" stylesheets="@style.css" text="- Remove Playlist" />
+            <Button id="btn-remove-playlist" layoutX="10.0" layoutY="37.0" mnemonicParsing="false" onAction="#renamePlaylistBtnClicked" prefHeight="27.0" prefWidth="210.0" stylesheets="@style.css" text="&lt;/&gt; Rename Playlist" />
+            <Label prefHeight="25.0" prefWidth="62.0" text="Playlists">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <ListView prefHeight="606.0" prefWidth="202.0" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <ToolBar id="main-top-toolbar" prefHeight="40.0" prefWidth="200.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+        <items>
+            <ImageView fitHeight="48.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@res/logo.png" />
+               </image>
+            </ImageView>
+            <Region prefHeight="48.0" prefWidth="13.0" />
+            <TextField onKeyTyped="#keyBeingPressedInSearchbox" promptText="Search..." />
+          <Button id="btn-search" mnemonicParsing="false" onAction="#searchBtnClicked" stylesheets="@style.css" text="&gt;" />
+            <Region prefHeight="48.0" prefWidth="188.0" />
+            <Button id="btn-tracks" mnemonicParsing="false" stylesheets="@style.css" text="Tracks" />
+            <Button id="btn-artists" layoutX="511.0" layoutY="21.0" mnemonicParsing="false" styleClass="text-style" stylesheets="@style.css" text="Artists" />
+            <Button id="btn-radio" layoutX="575.0" layoutY="21.0" mnemonicParsing="false" stylesheets="@style.css" text="Radio" />
+            <Region layoutX="289.0" layoutY="10.0" prefHeight="48.0" prefWidth="197.0" />
+            <Button id="btn-go-premium" layoutX="511.0" layoutY="21.0" mnemonicParsing="false" stylesheets="@style.css" text="Go Premium" />
+            <Button id="btn-settings" layoutX="748.0" layoutY="21.0" mnemonicParsing="false" stylesheets="@style.css" text="Settings" />
+        </items>
+      </ToolBar>
+   </top>
+   <right>
+      <VBox prefHeight="579.0" prefWidth="186.0" styleClass="now-playing-pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Now Playing">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <ListView prefHeight="574.0" prefWidth="186.0" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox prefHeight="49.0" prefWidth="659.0" styleClass="title-pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label id="top-title" prefHeight="48.0" prefWidth="274.0" stylesheets="@style.css" text="Running" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="49.0" prefWidth="371.0" />
+                  <Button id="btn-more" mnemonicParsing="false" prefHeight="23.0" prefWidth="36.0" stylesheets="@style.css" text=". . .">
+                     <font>
+                        <Font name="Avenir Next Regular" size="13.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <TableView prefHeight="547.0" prefWidth="659.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn prefWidth="384.52037048339844" text="C1" />
+                <TableColumn minWidth="0.0" prefWidth="166.75848388671875" text="C2" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
